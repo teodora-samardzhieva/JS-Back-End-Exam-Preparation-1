@@ -101,3 +101,14 @@
     - (add isAuth route guard to userController.js /logout)
     - (add isGuest route guard to userController.js /register & /login)
 
+
+### 10. Dynamic content
+ - [x] Add user data to handlebars context (src/middlewares/authMiddleware.js)
+ - [x] Dynamic navigation (src/views/layouts/main.hbs)
+ - [x] Dynamic titles (src/index.js)
+ - [x] BONUS: Set page title from view
+  
+
+### 11. Error handling and Validation
+ - [x] Add error message in notification (src/views/layouts/main.hbs)
+ - [x] Notification conditional rendering (src/views/layouts/main.hbs)
