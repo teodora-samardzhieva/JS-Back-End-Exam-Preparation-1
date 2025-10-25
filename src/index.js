@@ -6,7 +6,9 @@ import routes from './routes.js';
 const app = express();
 
 // Config handlebars engine
-app.engine('hbs', handlebars.engine());
+app.engine('hbs', handlebars.engine({
+    extname: 'hbs', // config handlebars file extension
+}));
 app.set('view engine', 'hbs'); // use handlebars engine
 
 // Add static middleware
