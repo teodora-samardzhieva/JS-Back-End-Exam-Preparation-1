@@ -38,3 +38,5 @@
  - [x] Add error handling on connect (with try{} catch(err){})
  - [x] Add simple user model (create in src folder models/User.js)
 
+### 5. Register
+ - [x] Fix navigation links (in src/views/layouts/main.hbs)
