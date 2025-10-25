@@ -31,3 +31,6 @@
  - [x] Add layout (create in src/views folder layouts/main.hbs)
  - [x] Add partials dir (create in src/views folder partials)
  - [x] Config handlebars to work with mongoose documents (in src/index.js) `runtimeOptions: { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`
+
+### 4. Database
+ - [x] Install mongoose `npm i mongoose`
