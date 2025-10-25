@@ -7,3 +7,4 @@
  - [x] Change module system
  - [x] Add start file `/src/index.js`  
  - [x] Add dev script
+ - [x] Config debugger
