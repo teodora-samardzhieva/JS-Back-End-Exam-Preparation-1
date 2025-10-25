@@ -36,5 +36,5 @@
  - [x] Install mongoose `npm i mongoose`
  - [x] Connect to db (in src/index.js -> await mongoose.connect('mongodb://localhost:27017', { dbName: 'friendly-world'}))
  - [x] Add error handling on connect (with try{} catch(err){})
-
+ - [x] Add simple user model (create in src folder models/User.js)
 
