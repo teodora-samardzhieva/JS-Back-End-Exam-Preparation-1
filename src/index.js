@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static('src/public'));
 
 // Add body parser
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); // parse data from html forms
 
 // Add routes
 app.use(routes);

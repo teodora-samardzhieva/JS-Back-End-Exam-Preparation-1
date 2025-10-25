@@ -17,3 +17,4 @@
  - [x] Add body parser
  - [x] Add home controller
  - [x] Add route file
+ - [x] Add error controller
