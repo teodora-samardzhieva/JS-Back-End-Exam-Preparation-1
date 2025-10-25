@@ -3,5 +3,6 @@
 ## Create Skeleton Project
 
 ### 1. Initialize Project 
-- [x] Initialize npm project `npm init -y`
-- [x] Change module system
+ - [x] Initialize npm project `npm init -y`
+ - [x] Change module system
+ - [x] Add start file `/src/index.js`  
