@@ -52,3 +52,5 @@
  - [x] Create user service (create folder services/userService.js in src)
     - open mongobd compass app and connect to localhost:27017 -> friendly-world -> users and try to register again
  - [x] Redirect after successfull register (in src/controllers/userController.js)
+ - [x] Instal bcrypt `npm i bcrypt`
+ - [x] Hash passwords before save (in src/models/User.js)
