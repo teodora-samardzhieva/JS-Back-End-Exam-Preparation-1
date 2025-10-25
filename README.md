@@ -40,3 +40,5 @@
 
 ### 5. Register
  - [x] Fix navigation links (in src/views/layouts/main.hbs)
+ - [x] Add user controller (create userController.js in src/controllers)
+ - [x] Add user controller to routes (in src/routes.js)
