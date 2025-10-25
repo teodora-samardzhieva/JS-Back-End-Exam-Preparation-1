@@ -55,3 +55,28 @@
  - [x] Instal bcrypt `npm i bcrypt`
  - [x] Hash passwords before save (in src/models/User.js)
  - [x] BONUS: Check if user exists (in src/services/userService.js)
+
+### 6. Login
+ - [x] Fix login navigation link (src/views/latouts/main.hbs)
+ - [x] Add login view (src/views/login.html -> login.hbs & cut unnecessary part(headers/footers))
+ - [x] Add get login action (src/controllers/userControllers.js -> userControllers.get('/login', (...)))
+ - [x] Fix/Modify login form 
+    - src/views/login.hbs -> method="POST" remove action 
+    - name properties: name="email" ; name="password"
+    - href='/users/register'
+ - [x] Add post login acion (src/controllers/userControllers.js -> userControllers.post('/login', async (...)))
+ - [x] Add login method in userService (src/services/userService.js -> export async function login(email, password) {......})
+ - [x] Validate if user exists (src/services/userService.js)
+ - [x] Validate password (src/services/userService.js)
+ - [x] Install jsonwebtoke `npm i jsonwebtoken`
+ - [x] Generate token (src/services/userService.js)
+ - [x] Call userService from userController (src/controllers/userControllers.js)
+ - [x] Send token as cookie (src/controllers/userControllers.js)
+ - [x] Redirect to homepage (src/controllers/userControllers.js)
+    - try to login -> Inspect console -> Application -> Cookies -> token: jhGg6t6Fyt76UYg6tUY
+    - open jwt.io -> paste token and validate
+ - [x] BONUS: Extract jwt secret to constant or env (create folder config/constants.js in src)
+    - src/services/userService.js -> const token = jwt.sign(payload, JWT_SECRET, {expiresIn: '2h'});
+ - [x] Auto login on register
+    - create folder utils/tokenUtils.js in src 
+    - move the token from src/services/userService.js to src/utils/tokenUtils.js

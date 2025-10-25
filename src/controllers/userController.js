@@ -16,10 +16,30 @@ userController.post('/register', async (req, res) => {
 
     const {email, password} = req.body;
     // create userService
-    const result = await userService.register(email, password);
+    const token = await userService.register(email, password);
+
+    res.cookie('auth', token); // auto login on register
+    // res.end();
+    // res.redirect('/users/login');
+    res.redirect('/');
+});
+
+userController.get('/login', (req, res) => {
+    res.render('users/login');
+});
+
+userController.post('/login', async (req, res) => {
+    const {email, password} = req.body;
+    // console.log(req.body);
+
+    // Call userService from userController
+    const token = await userService.login(email, password);
+
+    // send token as cookie
+    res.cookie('auth', token);
 
     // res.end();
-    res.redirect('/users/login');
+    res.redirect('/');
 });
 
 export default userController;
