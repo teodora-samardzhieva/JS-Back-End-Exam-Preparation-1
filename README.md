@@ -14,3 +14,4 @@
  - [x] Install express `npm i express`
  - [x] Init express server
  - [x] Setup static middleware
+ - [x] Add body parser
