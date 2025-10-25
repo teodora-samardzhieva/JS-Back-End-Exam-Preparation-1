@@ -15,3 +15,4 @@
  - [x] Init express server
  - [x] Setup static middleware
  - [x] Add body parser
+ - [x] Add home controller
