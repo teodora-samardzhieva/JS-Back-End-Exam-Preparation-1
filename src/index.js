@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import routes from './routes.js';
 import cookieParser from 'cookie-parser';
 import { authMiddleware } from './middlewares/authMiddleware.js';
+import { errorMiddleware } from './middlewares/errorMiddleware.js';
 
 const app = express();
 
@@ -55,5 +56,8 @@ app.use(authMiddleware);
 
 // Add routes
 app.use(routes);
+
+// BONUS: Add global error handling
+app.use(errorMiddleware);
 
 app.listen(5000, () => console.log('Server is listening on http://localhost:5000... '));

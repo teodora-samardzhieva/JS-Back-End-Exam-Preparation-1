@@ -127,3 +127,6 @@
  - [x] Error handling and data persistance on login 
     - (try/catch on login.post in src/controllers/userController.js)
     - (src/views/login.hbs -> value="{{user.email}}")
+
+### Bonus
+ - [x] Add global error handler (create errorMiddleware.js in src/middlewares)
