@@ -7,6 +7,7 @@ const app = express();
 
 // Config handlebars engine
 app.engine('hbs', handlebars.engine());
+app.set('view engine', 'hbs'); // use handlebars engine
 
 // Add static middleware
 app.use(express.static('src/public'));

@@ -22,3 +22,4 @@
 ### 3. Handlebars
  - [x] Install handlebars `npm i express-handlebars`
  - [x] Config hanlebars engine
+ - [x] Use handlebars engine
