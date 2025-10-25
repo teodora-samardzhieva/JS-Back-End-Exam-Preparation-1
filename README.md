@@ -49,3 +49,6 @@
     - name="email" ; name="password" ; name="repeatPassword" 
     - href='/users/login'
  - [x] Create post route for register (in src/controllers/userControllers.js)
+ - [x] Create user service (create folder services/userService.js in src)
+    - open mongobd compass app and connect to localhost:27017 -> friendly-world -> users and try to register again
+ - [x] Redirect after successfull register (in src/controllers/userController.js)

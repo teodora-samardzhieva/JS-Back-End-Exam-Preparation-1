@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { userService } from "../services/index.js";
 
 const userController = Router();
 
@@ -10,10 +11,15 @@ userController.get('/register', (req, res) => {
 });
 
 // Create post route for register
-userController.post('/register', (req, res) => {
-    console.log(req.body);
+userController.post('/register', async (req, res) => {
+    // console.log(req.body);
 
-    res.end();
-})
+    const {email, password} = req.body;
+    // create userService
+    const result = await userService.register(email, password);
+
+    // res.end();
+    res.redirect('/users/login');
+});
 
 export default userController;
