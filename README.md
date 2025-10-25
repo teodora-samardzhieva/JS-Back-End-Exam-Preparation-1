@@ -8,6 +8,7 @@
  - [x] Add start file `/src/index.js`  
  - [x] Add dev script
  - [x] Config debugger
+ - [x] Add resources
 
 ### 2. Expres
  - [x] Install express `npm i express`
