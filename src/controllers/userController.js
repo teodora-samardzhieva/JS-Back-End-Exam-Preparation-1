@@ -9,4 +9,11 @@ userController.get('/register', (req, res) => {
     // rename register.html to register.hbs
 });
 
+// Create post route for register
+userController.post('/register', (req, res) => {
+    console.log(req.body);
+
+    res.end();
+})
+
 export default userController;

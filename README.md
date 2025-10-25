@@ -48,3 +48,4 @@
     - method="POST" ; remove action because we want to post on the same route (get and post routes are the same)
     - name="email" ; name="password" ; name="repeatPassword" 
     - href='/users/login'
+ - [x] Create post route for register (in src/controllers/userControllers.js)
