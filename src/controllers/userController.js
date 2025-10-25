@@ -42,4 +42,10 @@ userController.post('/login', async (req, res) => {
     res.redirect('/');
 });
 
+// Add logout action
+userController.get('/logout', (req, res) => {
+    res.clearCookie('auth');
+    res.redirect('/');
+})
+
 export default userController;

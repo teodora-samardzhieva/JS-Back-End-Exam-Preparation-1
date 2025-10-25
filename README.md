@@ -80,3 +80,7 @@
  - [x] Auto login on register
     - create folder utils/tokenUtils.js in src 
     - move the token from src/services/userService.js to src/utils/tokenUtils.js
+
+### 7. Logout
+ - [x] Add logout navigation link (src/views/layouts/main.hbs)
+ - [x] Add logout action (src/controllers/userController.js)
