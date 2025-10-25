@@ -44,3 +44,7 @@
  - [x] Add user controller to routes (in src/routes.js)
  - [x] Create register view
  - [x] Render register view
+ - [x] Modify register form
+    - method="POST" ; remove action because we want to post on the same route (get and post routes are the same)
+    - name="email" ; name="password" ; name="repeatPassword" 
+    - href='/users/login'
