@@ -129,4 +129,4 @@
     - (src/views/login.hbs -> value="{{user.email}}")
 
 ### Bonus
- - [x] Add global error handler (create errorMiddleware.js in src/middlewares)
+ - [x] Export helpers into separate module

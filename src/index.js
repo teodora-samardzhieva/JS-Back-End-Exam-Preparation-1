@@ -6,6 +6,7 @@ import routes from './routes.js';
 import cookieParser from 'cookie-parser';
 import { authMiddleware } from './middlewares/authMiddleware.js';
 import { errorMiddleware } from './middlewares/errorMiddleware.js';
+import helpers from './views/helpers/index.js';
 
 const app = express();
 
@@ -27,14 +28,7 @@ app.engine('hbs', handlebars.engine({
         allowProtoPropertiesByDefault: true, 
         allowProtoMethodsByDefault: true 
     },
-    helpers: {
-        setTitle(title) {
-            this.pageTitle = title;
-        },
-        getTitle() {
-            return this.pageTitle || 'Friendly World';
-        }
-    }
+    helpers,
 }));
 app.set('view engine', 'hbs'); // 2. use handlebars engine
 app.set('views', 'src/views'); // 4. set views folder
