@@ -30,3 +30,4 @@
  - [x] Fix asset paths (remove ./static part from paths in html.hbs)
  - [x] Add layout (create in src/views folder layouts/main.hbs)
  - [x] Add partials dir (create in src/views folder partials)
+ - [x] Config handlebars to work with mongoose documents (in src/index.js) `runtimeOptions: { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`

@@ -8,6 +8,10 @@ const app = express();
 // 1. Config handlebars engine
 app.engine('hbs', handlebars.engine({
     extname: 'hbs', // 3. config handlebars file extension
+    runtimeOptions: { 
+        allowProtoPropertiesByDefault: true, 
+        allowProtoMethodsByDefault: true 
+    }
 }));
 app.set('view engine', 'hbs'); // 2. use handlebars engine
 app.set('views', 'src/views'); // 4. set views folder
