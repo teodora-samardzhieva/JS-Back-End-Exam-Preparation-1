@@ -6,3 +6,4 @@
  - [x] Initialize npm project `npm init -y`
  - [x] Change module system
  - [x] Add start file `/src/index.js`  
+ - [x] Add dev script
