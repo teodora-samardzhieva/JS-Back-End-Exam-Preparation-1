@@ -27,4 +27,6 @@
  - [x] Set views folder
  - [x] Add home view (src/views/home.html -> home.hbs)
  - [x] Render home view without layout (src/controllers/homeController.js) `res.render('home', {layout: false});`
- - [x] Fix asset paths (remove ./static)
+ - [x] Fix asset paths (remove ./static part from paths in html.hbs)
+ - [x] Add layout (create in src/views folder layouts/main.hbs)
+ - [x] Add partials dir (create in src/views folder partials)

@@ -4,7 +4,8 @@ const homeController = Router();
 
 homeController.get('/', (req, res) => {
     // res.send('It works!');
-    res.render('home', {layout: false}); // Render home view without layout
+    // res.render('home', {layout: false}); // Render home view without layout 
+    res.render('home'); // Render home view with layout (after we have created layouts/main.hbs in src/views)
 });
 
 // homeController.post('/', (req, res) => {
