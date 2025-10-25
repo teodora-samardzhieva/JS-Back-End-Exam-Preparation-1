@@ -21,10 +21,10 @@
 
 ### 3. Handlebars
  - [x] Install handlebars `npm i express-handlebars`
- - [x] Config hanlebars engine
- - [x] Use handlebars engine
- - [x] Config handlebars file extension
- - [x] Set views folder
+ - [x] Config hanlebars engine (in src/index.js -> app.engine('hbs', handlebars.engine({....})) )
+ - [x] Use handlebars engine (in src/index.js -> app.set('view engine', 'hbs'))
+ - [x] Config handlebars file extension (in src/index.js -> ` extname: 'hbs' `)
+ - [x] Set views folder (in src/index.js -> app.set('views', 'src/views'))
  - [x] Add home view (src/views/home.html -> home.hbs)
  - [x] Render home view without layout (src/controllers/homeController.js) `res.render('home', {layout: false});`
  - [x] Fix asset paths (remove ./static part from paths in html.hbs)
