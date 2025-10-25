@@ -24,3 +24,6 @@
  - [x] Config hanlebars engine
  - [x] Use handlebars engine
  - [x] Config handlebars file extension
+ - [x] Set views folder
+ - [x] Add home view (src/views/home.html -> home.hbs)
+ - [x] Render home view without layout (src/controllers/homeController.js) `res.render('home', {layout: false});`

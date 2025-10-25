@@ -5,11 +5,12 @@ import routes from './routes.js';
 
 const app = express();
 
-// Config handlebars engine
+// 1. Config handlebars engine
 app.engine('hbs', handlebars.engine({
-    extname: 'hbs', // config handlebars file extension
+    extname: 'hbs', // 3. config handlebars file extension
 }));
-app.set('view engine', 'hbs'); // use handlebars engine
+app.set('view engine', 'hbs'); // 2. use handlebars engine
+app.set('views', 'src/views'); // 4. set views folder
 
 // Add static middleware
 app.use(express.static('src/public'));
