@@ -18,3 +18,7 @@
  - [x] Add home controller
  - [x] Add route file
  - [x] Add error controller
+
+### 3. Handlebars
+ - [x] Install handlebars `npm i express-handlebars`
+ - [x] Config hanlebars engine
