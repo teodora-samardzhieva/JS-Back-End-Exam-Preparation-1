@@ -54,3 +54,4 @@
  - [x] Redirect after successfull register (in src/controllers/userController.js)
  - [x] Instal bcrypt `npm i bcrypt`
  - [x] Hash passwords before save (in src/models/User.js)
+ - [x] BONUS: Check if user exists (in src/services/userService.js)
