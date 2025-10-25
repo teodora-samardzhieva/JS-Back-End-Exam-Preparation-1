@@ -84,3 +84,12 @@
 ### 7. Logout
  - [x] Add logout navigation link (src/views/layouts/main.hbs)
  - [x] Add logout action (src/controllers/userController.js)
+
+### 8. Authentication
+ - [x] Install and use cookie-parser `npm i cookie-parser` (src/index.js)
+ - [x] Create auth middleware (create folder middlewares/authMiddleware.js in src)
+    - [x] Allow if guest (no token)
+    - [x] Verify token (clear session if invalid)
+    - [x] Attach decoded token to req.user (if token is valid)
+ - [x] Use auth middleware (src/index.js)
+    - TEST Authentication: src/controllers/homeController.js
