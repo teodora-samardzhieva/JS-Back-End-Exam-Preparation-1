@@ -4,12 +4,17 @@ import User from "../models/User.js";
 import { generateAuthToken } from '../utils/tokenUtils.js';
 // import { JWT_SECRET } from '../config/constants.js';
 
-export async function register(email, password) {
+export async function register(email, password, repeatPassword) {
     // BONUS: check if use exists
     const user = await User.findOne({email});
     if(user) {
         throw new Error('Email already exists!');
     }
+
+    // Check repeatPassword in service
+    // if(password !== repeatPassword) {
+    //     throw new Error('Password missmatch!');
+    // }
 
     // return User.create({email, password});
     // auto login on register

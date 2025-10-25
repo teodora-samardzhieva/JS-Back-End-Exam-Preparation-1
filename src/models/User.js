@@ -12,6 +12,20 @@ const userScheme = new Schema({
     } 
 });
 
+// Check repeatPassword in model
+userScheme.virtual('repeatPassword')
+    .get(function() {
+        return this._repeatPassword;
+    })
+    .set(function(value) {
+        this._repeatPassword = value;
+    });
+
+userScheme.pre('validate', function() {
+    if(this.isNew && this.password !== this._repeatPassword) {
+        throw new Error('Password missmatch!')
+    }
+})
 // hash password
 userScheme.pre('save', async function() {
     this.password = await bcrypt.hash(this.password, 12);

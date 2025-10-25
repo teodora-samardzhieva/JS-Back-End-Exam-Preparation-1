@@ -100,6 +100,9 @@
  - [x] Add route guards
     - (add isAuth route guard to userController.js /logout)
     - (add isGuest route guard to userController.js /register & /login)
+ - [x] Add not found page 
+    - (src/views/404.html -> 404.hbs & remove ./static)
+    - (src/controllers/errorController.js)
 
 
 ### 10. Dynamic content
@@ -112,3 +115,15 @@
 ### 11. Error handling and Validation
  - [x] Add error message in notification (src/views/layouts/main.hbs)
  - [x] Notification conditional rendering (src/views/layouts/main.hbs)
+ - [x] Create getErrorMessage util function (create errorUtils.js in src/utils/)
+ - [x] Add error handling for register (try/catch on register.post in src/controllers/userController.js)
+ - [x] Add register form data persistance 
+    - (email from the form is still there after unsuccessfull login/register)
+    - (src/controllers/userController.js -> user: { email })
+    - (src/views/register.hbs -> value="{{user.email}}")
+ - [x] Check repeatPassword in service (src/controllers/userController.js)
+ - [x] BONUS: Check repeatPassword in model
+    - (src/models/User.js)
+ - [x] Error handling and data persistance on login 
+    - (try/catch on login.post in src/controllers/userController.js)
+    - (src/views/login.hbs -> value="{{user.email}}")
