@@ -129,4 +129,11 @@
     - (src/views/login.hbs -> value="{{user.email}}")
 
 ### Bonus
- - [x] Export helpers into separate module
+ - [x] Export helpers into separate module (create folder helpers/pageHelpers.js in src/views)
+ - [x] Add env variable for debuging 
+    - npm i dotenv
+    - create first level .env file
+ - [x] Add global error handler (create errorMiddleware.js in src/middlewares)
+ - [ ] Add bundler
+ - [ ] Use async jwt
+ - [ ] Refresh token

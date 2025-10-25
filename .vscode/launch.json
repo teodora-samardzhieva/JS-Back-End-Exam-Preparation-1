@@ -14,7 +14,10 @@
             "program": "${workspaceFolder}\\src\\index.js",
             "runtimeArgs": [
                 "--watch"
-            ]
+            ],
+            "env": {
+                "PORT": "3001"
+            }
         }
     ]
 }

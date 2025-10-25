@@ -1,9 +1,10 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
 import mongoose from 'mongoose';
+import cookieParser from 'cookie-parser';
+import 'dotenv/config';
 
 import routes from './routes.js';
-import cookieParser from 'cookie-parser';
 import { authMiddleware } from './middlewares/authMiddleware.js';
 import { errorMiddleware } from './middlewares/errorMiddleware.js';
 import helpers from './views/helpers/index.js';
@@ -54,4 +55,5 @@ app.use(routes);
 // BONUS: Add global error handling
 app.use(errorMiddleware);
 
-app.listen(5000, () => console.log('Server is listening on http://localhost:5000... '));
+// app.listen(5000, () => console.log('Server is listening on http://localhost:5000... '));
+app.listen(process.env.PORT, () => console.log(`Server is listening on http://localhost:${process.env.PORT}... `));
