@@ -93,3 +93,11 @@
     - [x] Attach decoded token to req.user (if token is valid)
  - [x] Use auth middleware (src/index.js)
     - TEST Authentication: src/controllers/homeController.js
+
+### 9. Authorization
+ - [x] Create isAuth middleware (src/middlewares/authMiddleware.js) 
+ - [x] Create isGuest middleware (src/middlewares/authMiddleware.js) 
+ - [x] Add route guards
+    - (add isAuth route guard to userController.js /logout)
+    - (add isGuest route guard to userController.js /register & /login)
+

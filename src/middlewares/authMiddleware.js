@@ -21,3 +21,22 @@ export function authMiddleware(req, res, next) {
         res.redirect('/users/login');
     }
 }
+
+// Authorization
+// Create isAuth middleware
+export function isAuth(req, res, next) {
+    if(!req.isAuthenticated) {
+        return res.redirect('/users/login');
+    }
+
+    next();
+}
+
+// Create isGuest middleware
+export function isGuest(req, res, next) {
+    if(req.isAuthenticated) {
+        return res.redirect('/');
+    }
+
+    next();
+}

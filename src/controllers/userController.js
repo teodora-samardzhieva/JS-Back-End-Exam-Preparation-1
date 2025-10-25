@@ -1,9 +1,10 @@
 import { Router } from "express";
 import { userService } from "../services/index.js";
+import { isAuth, isGuest } from "../middlewares/authMiddleware.js";
 
 const userController = Router();
 
-userController.get('/register', (req, res) => {
+userController.get('/register', isGuest, (req, res) => {
     res.render('users/register')
     // create new folder users in src/views
     // move register.html and login.html into src/views/users
@@ -11,7 +12,7 @@ userController.get('/register', (req, res) => {
 });
 
 // Create post route for register
-userController.post('/register', async (req, res) => {
+userController.post('/register', isGuest, async (req, res) => {
     // console.log(req.body);
 
     const {email, password} = req.body;
@@ -24,11 +25,11 @@ userController.post('/register', async (req, res) => {
     res.redirect('/');
 });
 
-userController.get('/login', (req, res) => {
+userController.get('/login', isGuest, (req, res) => {
     res.render('users/login');
 });
 
-userController.post('/login', async (req, res) => {
+userController.post('/login', isGuest, async (req, res) => {
     const {email, password} = req.body;
     // console.log(req.body);
 
@@ -43,7 +44,7 @@ userController.post('/login', async (req, res) => {
 });
 
 // Add logout action
-userController.get('/logout', (req, res) => {
+userController.get('/logout', isAuth, (req, res) => {
     res.clearCookie('auth');
     res.redirect('/');
 })
